@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/zvuk-dlya-stsenyi-ujasa-24334.mp3-e6eae10c84b465496993b0883ab84405.mp3str"
+
+[deps]
+
+source_file="res://Assets/zvuk-dlya-stsenyi-ujasa-24334.mp3"
+dest_files=[ "res://.import/zvuk-dlya-stsenyi-ujasa-24334.mp3-e6eae10c84b465496993b0883ab84405.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Attack.mp3-bb0c3d81fb9e218c40f1ae361a410996.mp3str"
+
+[deps]
+
+source_file="res://Assets/Enemies/RoboChicken/Attack.mp3"
+dest_files=[ "res://.import/Attack.mp3-bb0c3d81fb9e218c40f1ae361a410996.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

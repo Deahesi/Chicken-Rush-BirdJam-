@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/PauseMenu.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Btns/image_part_0023 (1).png" type="Texture" id=2]
+[ext_resource path="res://Assets/Btns/image_part_0023 (2).png" type="Texture" id=3]
+
+[node name="PauseMenu" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+moff = ExtResource( 2 )
+mon = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1278.0
+margin_bottom = 719.0
+color = Color( 0, 0, 0, 0.243137 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+pause_mode = 2
+margin_left = 400.0
+margin_right = 880.0
+margin_bottom = 480.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+toggle_mode = true
+texture_normal = ExtResource( 3 )
+
+[connection signal="toggled" from="TextureButton" to="." method="_on_TextureButton_toggled"]

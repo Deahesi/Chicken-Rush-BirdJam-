@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/myagkoe-korotkoe-padenie.mp3-f18b99662a526f500d131ee6cbf6f190.mp3str"
+
+[deps]
+
+source_file="res://Assets/Levels/myagkoe-korotkoe-padenie.mp3"
+dest_files=[ "res://.import/myagkoe-korotkoe-padenie.mp3-f18b99662a526f500d131ee6cbf6f190.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

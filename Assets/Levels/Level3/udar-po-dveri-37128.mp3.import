@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/udar-po-dveri-37128.mp3-a53c26641443d9badae317c88ae9e1d5.mp3str"
+
+[deps]
+
+source_file="res://Assets/Levels/Level3/udar-po-dveri-37128.mp3"
+dest_files=[ "res://.import/udar-po-dveri-37128.mp3-a53c26641443d9badae317c88ae9e1d5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

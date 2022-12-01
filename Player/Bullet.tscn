@@ -1,0 +1,70 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Assets/Player/Attack/chicken-eggAtt.png" type="Texture" id=1]
+[ext_resource path="res://Player/Bullet.cs" type="Script" id=2]
+[ext_resource path="res://Assets/Player/Attack/egg.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 0.73103, 0.723084 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 192, 96 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 192, 0, 192, 96 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 384, 0, 192, 96 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 576, 0, 192, 96 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1113, 255, 371, 85 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "Collided",
+"speed": 18.0
+}, {
+"frames": [ SubResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+follow_viewport_enable = true
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 0.00589752, -0.0185814 )
+scale = Vector2( 25, 25 )
+script = ExtResource( 2 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="KinematicBody2D"]
+position = Vector2( 0.10009, -0.0185814 )
+scale = Vector2( 0.0760046, 0.1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( 0.0960742, 0.136257 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
+position = Vector2( 0.00695628, -0.010478 )
+scale = Vector2( 0.0341962, 0.0454367 )
+frames = SubResource( 7 )
+animation = "Collided"
+
+[connection signal="animation_finished" from="KinematicBody2D/AnimatedSprite" to="KinematicBody2D" method="_on_AnimatedSprite_animation_finished"]

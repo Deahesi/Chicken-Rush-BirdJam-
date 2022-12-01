@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Hurt.mp3-e49a51ae51e95ab3e9d3e96896e48d5b.mp3str"
+
+[deps]
+
+source_file="res://Assets/Enemies/RoboChicken/Hurt.mp3"
+dest_files=[ "res://.import/Hurt.mp3-e49a51ae51e95ab3e9d3e96896e48d5b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

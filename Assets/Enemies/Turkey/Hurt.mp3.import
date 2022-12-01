@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Hurt.mp3-cb0208aa96fb4874e7af79c60d51a3ca.mp3str"
+
+[deps]
+
+source_file="res://Assets/Enemies/Turkey/Hurt.mp3"
+dest_files=[ "res://.import/Hurt.mp3-cb0208aa96fb4874e7af79c60d51a3ca.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

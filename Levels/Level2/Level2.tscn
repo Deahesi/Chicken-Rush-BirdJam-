@@ -1,0 +1,735 @@
+[gd_scene load_steps=49 format=2]
+
+[ext_resource path="res://Levels/Objects.cs" type="Script" id=1]
+[ext_resource path="res://Assets/Levels/Level2/AssetsLvl2 (2).png" type="Texture" id=2]
+[ext_resource path="res://Assets/Levels/Level2/paralax1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Levels/Level2/exit2.png" type="Texture" id=4]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Levels/Level2/CameraLevel2.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Enemies/Chicken/Chicken.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Levels/Group.gd" type="Script" id=9]
+[ext_resource path="res://Levels/Level1/TriggerGroup1.gd" type="Script" id=10]
+[ext_resource path="res://Enemies/Chicken/Chicken2.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Enemies/Chicken/Chicken3.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Enemies/RoboChicken/RoboChicken.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Enemies/RoboChicken/Head.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Levels/Level1/LayerChange.gd" type="Script" id=16]
+[ext_resource path="res://Levels/Level1/AreaStairs.gd" type="Script" id=17]
+[ext_resource path="res://Levels/Level2/PlayerGroup.gd" type="Script" id=18]
+[ext_resource path="res://Levels/Level2/Cutscene.gd" type="Script" id=19]
+[ext_resource path="res://Assets/Levels/Level2/level2.mp3" type="AudioStream" id=20]
+[ext_resource path="res://Levels/Level2/music.gd" type="Script" id=21]
+[ext_resource path="res://Post Processing tool/PostProcessing_tool.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Levels/Level2/End.gd" type="Script" id=23]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 360, 400, 0.584, 400, 0.584, 380.652, 360, 380.652 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 360, 400, 0.583984, 400, 0.583984, 380.652, 360, 380.652 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 0.887939, 300.267, 390.888, 300.267, 390.888, 320, 0.887939, 320 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 360, 400, 0.440979, 400, 0.440979, 380.652, 360, 380.652 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 378, 400, 0.387939, 400, 0.387939, 380.652, 378, 380.652 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 360, 400, 0.388, 400, 0.388, 380.116, 360, 380.116 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 360, 400, 0.388, 400, 0.388, 380.116, 360, 380.116 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 390.388, 320, 0.388, 320, 0.388, 300, 390.388, 300 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 0.387939, 300, 395.388, 300, 395.388, 320, 0.387939, 320 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+points = PoolVector2Array( 390.388, 320, 0.387939, 320, 0.387939, 300, 390.388, 300 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
+points = PoolVector2Array( 0.887939, 300.267, 390.888, 300.267, 390.888, 320, 0.887939, 320 )
+
+[sub_resource type="TileSet" id=10]
+0/name = "Wall1"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 25, 0, 360, 400 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "Wall2"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 465, 0, 360, 400 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "Wall3"
+2/texture = ExtResource( 2 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 910, 0, 360, 400 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 3 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "Wall4"
+3/texture = ExtResource( 2 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 1383, 0, 378, 400 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 4 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "Wall5"
+4/texture = ExtResource( 2 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 26, 436, 360, 400 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 5 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "Wall6"
+5/texture = ExtResource( 2 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 466, 436, 360, 400 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape = SubResource( 6 )
+5/shape_one_way = false
+5/shape_one_way_margin = 1.0
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+5/z_index = 0
+6/name = "Floor1"
+6/texture = ExtResource( 2 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 911, 480, 689, 320 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape = SubResource( 7 )
+6/shape_one_way = false
+6/shape_one_way_margin = 1.0
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+6/z_index = 0
+7/name = "Floor2"
+7/texture = ExtResource( 2 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 1561, 400, 690, 320 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape = SubResource( 8 )
+7/shape_one_way = false
+7/shape_one_way_margin = 1.0
+7/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+7/z_index = 0
+8/name = "Floor3"
+8/texture = ExtResource( 2 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 2276, 400, 690, 320 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape = SubResource( 9 )
+8/shape_one_way = false
+8/shape_one_way_margin = 1.0
+8/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+8/z_index = 0
+9/name = "Road"
+9/texture = ExtResource( 2 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 3341, 5, 690, 320 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape = SubResource( 13 )
+9/shape_one_way = false
+9/shape_one_way_margin = 1.0
+9/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 13 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+9/z_index = 0
+10/name = "Road"
+10/texture = ExtResource( 2 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 3021, 465, 690, 320 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape = SubResource( 12 )
+10/shape_one_way = false
+10/shape_one_way_margin = 1.0
+10/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 12 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+10/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 257.5, 365.5 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 560, 720 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 560, 0, 560, 720 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 1120, 0, 560, 720 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 1680, 0, 560, 720 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 2240, 0, 560, 720 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 2800, 0, 560, 720 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 3360, 0, 560, 720 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 3920, 0, 560, 720 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 4480, 0, 560, 720 )
+
+[sub_resource type="SpriteFrames" id=24]
+animations = [ {
+"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
+"loop": false,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 10, 368.5 )
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Level2" type="Node"]
+script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource( 15 )]
+
+[node name="PauseMenu2" parent="CanvasLayer" instance=ExtResource( 7 )]
+
+[node name="PostProcessing_tool" parent="CanvasLayer" instance=ExtResource( 22 )]
+anchor_left = -0.675
+margin_left = 862.0
+margin_right = 862.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+color_splash_strength = -1.939
+vignette_scale = 1.0
+
+[node name="LevelBackground" type="StaticBody2D" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="LevelBackground"]
+offset = Vector2( -6500, -90 )
+transform = Transform2D( 1, 0, 0, 1, -6500, -90 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="LevelBackground/ParallaxBackground"]
+motion_scale = Vector2( 0.4, 1 )
+
+[node name="Sprite2" type="Sprite" parent="LevelBackground/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 7576, 290 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 2345, 400 )
+
+[node name="Sprite3" type="Sprite" parent="LevelBackground/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 9920, 290 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 2345, 400 )
+
+[node name="Sprite4" type="Sprite" parent="LevelBackground/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 12263, 290 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 2345, 400 )
+
+[node name="Sprite5" type="Sprite" parent="LevelBackground/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 14607, 290 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 2345, 400 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="LevelBackground/ParallaxBackground"]
+motion_scale = Vector2( 0.5, 1 )
+
+[node name="Sprite" type="Sprite" parent="LevelBackground/ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 7575, 291 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 2345, 0, 2346, 400 )
+
+[node name="Sprite2" type="Sprite" parent="LevelBackground/ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 9919, 291 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 2345, 0, 2346, 400 )
+
+[node name="Sprite3" type="Sprite" parent="LevelBackground/ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 12262, 291 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 2345, 0, 2346, 400 )
+
+[node name="Sprite4" type="Sprite" parent="LevelBackground/ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 14606, 291 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 2345, 0, 2346, 400 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="LevelBackground/ParallaxBackground"]
+motion_scale = Vector2( 0.6, 1 )
+
+[node name="Sprite2" type="Sprite" parent="LevelBackground/ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 7576, 289 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 1, 398, 2344, 403 )
+
+[node name="Sprite3" type="Sprite" parent="LevelBackground/ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 9920, 289 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 1, 398, 2344, 403 )
+
+[node name="Sprite4" type="Sprite" parent="LevelBackground/ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 12263, 289 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 1, 398, 2344, 403 )
+
+[node name="Sprite5" type="Sprite" parent="LevelBackground/ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 14607, 289 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 1, 398, 2344, 403 )
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="LevelBackground/ParallaxBackground"]
+motion_scale = Vector2( 0.7, 1 )
+
+[node name="Sprite2" type="Sprite" parent="LevelBackground/ParallaxBackground/ParallaxLayer4"]
+position = Vector2( 7577, 287 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 2344, 400, 2345, 400 )
+
+[node name="Sprite3" type="Sprite" parent="LevelBackground/ParallaxBackground/ParallaxLayer4"]
+position = Vector2( 9921, 287 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 2344, 400, 2345, 400 )
+
+[node name="Sprite4" type="Sprite" parent="LevelBackground/ParallaxBackground/ParallaxLayer4"]
+position = Vector2( 12264, 287 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 2344, 400, 2345, 400 )
+
+[node name="Sprite5" type="Sprite" parent="LevelBackground/ParallaxBackground/ParallaxLayer4"]
+position = Vector2( 14608, 287 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 2344, 400, 2345, 400 )
+
+[node name="TileMap" type="TileMap" parent="LevelBackground"]
+tile_set = SubResource( 10 )
+cell_size = Vector2( 10, 10 )
+show_collision = true
+cell_clip_uv = true
+format = 1
+tile_data = PoolIntArray( 65533, 0, 0, 6, 15, 0, 33, 0, 0, 69, 0, 0, 75, 16, 0, 105, 2, 0, 108, 15, 0, 140, 3, 0, 177, 3, 0, 181, 17, 0, 214, 3, 0, 251, 3, 0, 284, 18, 0, 288, 3, 0, 325, 3, 0, 362, 5, 0, 398, 5, 0, 433, 3, 0, 470, 3, 0, 507, 3, 0, 508, 19, 0, 544, 3, 0, 581, 3, 0, 618, 3, 0, 655, 536870914, 0, 691, 1, 0, 726, 1, 0, 727, 18, 0, 762, 1, 0, 797, 4, 0, 822, 36, 0, 832, 0, 0, 868, 2, 0, 904, 5, 0, 939, 5, 0, 1084, 536870925, 0, 65740, 15, 0, 65839, 15, 0, 65961, 15, 0, 66088, 15, 0, 131897, 536870948, 0, 262584, 11, 0, 656185, 536870948, 0, 917531, 12, 0, 1245262, 26, 0, 2490868, 28, 0, 2490925, 28, 0, 2556177, 22, 0, 2686942, 8, 0, 2621442, 8, 0, 2621478, 8, 0, 2621514, 8, 0, 2621550, 8, 0, 2621586, 8, 0, 2621622, 8, 0, 2621658, 8, 0, 2621694, 8, 0, 2621730, 8, 0, 2621766, 8, 0, 2621802, 8, 0, 2621837, 9, 0, 2621873, 9, 0, 2621908, 9, 0, 2621944, 9, 0, 2621979, 9, 0, 2622015, 10, 0, 2622050, 10, 0, 2622085, 10, 0, 2622120, 10, 0, 2622155, 10, 0, 2622190, 10, 0, 2622226, 8, 0, 2622262, 8, 0, 2622298, 8, 0, 2622334, 8, 0, 2686980, 23, 0, 2687172, 23, 0, 2687310, 28, 0, 2687801, 536870948, 0, 2818182, 28, 0, 2883718, 28, 0, 2949194, 28, 0, 3014681, 28, 0, 3080719, 28, 0, 3145987, 28, 0, 3211431, 28, 0, 3342980, 28, 0, 3539429, 28, 0, 3604539, 28, 0, 3735763, 28, 0, 3801096, 28, 0, 3866719, 28, 0, 3932480, 28, 0, 3932675, 34, 0, 4194364, 22, 0, 4325327, -1610612699, 0, 4325359, -1610612699, 0, 4259853, -1610612699, 0, 4259875, -1610612699, 0, 4259907, -1610612699, 0, 4259939, -1610612699, 0, 4391296, 27, 0, 4522172, -1610612700, 0, 4522204, -1610612700, 0, 4522236, -1610612700, 0, 4522268, -1610612700, 0, 4522300, -1610612700, 0, 4522364, -1610612700, 0, 4522396, -1610612700, 0, 4522428, -1610612700, 0, 4522460, -1610612700, 0, 4522492, -1610612700, 0, 4522524, -1610612700, 0, 4522556, -1610612700, 0, 4522588, -1610612700, 0, 4522620, -1610612700, 0, 4522652, -1610612700, 0, 4522716, -1610612700, 0, 4522748, -1610612700, 0, 4522780, -1610612700, 0, 4522812, -1610612700, 0, 4522844, -1610612700, 0, 4522876, -1610612700, 0, 4522908, -1610612700, 0 )
+
+[node name="Area2D" type="Area2D" parent="LevelBackground"]
+script = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelBackground/Area2D"]
+position = Vector2( 9049.5, 362.5 )
+shape = SubResource( 14 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LevelBackground/Area2D"]
+position = Vector2( 9586, 478 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+
+[node name="Cutscene" type="AnimatedSprite" parent="LevelBackground/Area2D/StaticBody2D"]
+position = Vector2( 555, -136 )
+frames = SubResource( 24 )
+script = ExtResource( 19 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LevelBackground/Area2D/StaticBody2D"]
+polygon = PoolVector2Array( 640, 223, 287, 52, -102, 53, 263, 240 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="LevelBackground/Area2D/StaticBody2D"]
+position = Vector2( 371, -194 )
+polygon = PoolVector2Array( 421, 180, -14, 111.999, -354, 70.9999, -330, -17, 658, -5 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="LevelBackground"]
+follow_viewport_enable = true
+script = ExtResource( 16 )
+
+[node name="Sprite" type="Sprite" parent="LevelBackground/CanvasLayer"]
+position = Vector2( 9304, 384 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 1119, 251, 16, 303 )
+
+[node name="Triggers" type="Node2D" parent="."]
+
+[node name="TriggerGroup1" type="Area2D" parent="Triggers"]
+position = Vector2( 1177, 489 )
+priority = 1.0
+script = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/TriggerGroup1"]
+position = Vector2( -29, -136 )
+shape = SubResource( 25 )
+
+[node name="TriggerGroup2" type="Area2D" parent="Triggers"]
+position = Vector2( 3286, 533 )
+priority = 1.0
+script = ExtResource( 10 )
+group = "Group2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/TriggerGroup2"]
+position = Vector2( -48, -169 )
+shape = SubResource( 25 )
+
+[node name="TriggerGroup4" type="Area2D" parent="Triggers"]
+position = Vector2( 5285, 521 )
+priority = 1.0
+script = ExtResource( 10 )
+group = "Group3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/TriggerGroup4"]
+position = Vector2( -48, -169 )
+shape = SubResource( 25 )
+
+[node name="TriggerGroup3" type="Area2D" parent="Triggers"]
+position = Vector2( 9335, 503 )
+priority = 1.0
+script = ExtResource( 10 )
+group = "End"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triggers/TriggerGroup3"]
+position = Vector2( 2, -148.5 )
+shape = SubResource( 25 )
+
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="Player" type="Node2D" parent="Objects"]
+script = ExtResource( 18 )
+
+[node name="Player" type="CanvasLayer" parent="Objects/Player"]
+layer = 10
+follow_viewport_enable = true
+
+[node name="Player" parent="Objects/Player/Player" instance=ExtResource( 5 )]
+position = Vector2( 509, 500 )
+collision_layer = 2
+cutsceneStart = false
+
+[node name="Camera2D" type="Camera2D" parent="Objects/Player/Player/Player"]
+position = Vector2( 129, -88 )
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 9311
+limit_bottom = 720
+script = ExtResource( 6 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="Objects/Player/Player/Player"]
+frames = SubResource( 11 )
+
+[node name="Group1" type="Node2D" parent="Objects"]
+position = Vector2( 27, 5 )
+script = ExtResource( 9 )
+visible_g = true
+
+[node name="EnemyRobo4" type="CanvasLayer" parent="Objects/Group1"]
+layer = 10
+follow_viewport_enable = true
+
+[node name="KinematicBody2D2" parent="Objects/Group1/EnemyRobo4" instance=ExtResource( 13 )]
+position = Vector2( 2008, 478 )
+z_index = 999
+
+[node name="Head" parent="Objects/Group1/EnemyRobo4" instance=ExtResource( 14 )]
+position = Vector2( 1745, -380 )
+
+[node name="Chicken6" type="CanvasLayer" parent="Objects/Group1"]
+layer = 10
+follow_viewport_enable = true
+
+[node name="KinematicBody2D" parent="Objects/Group1/Chicken6" instance=ExtResource( 11 )]
+position = Vector2( 2283, 511 )
+
+[node name="Group2" type="Node2D" parent="Objects"]
+position = Vector2( 27, 5 )
+script = ExtResource( 9 )
+visible_g = true
+
+[node name="EnemyRobo6" type="CanvasLayer" parent="Objects/Group2"]
+layer = 10
+follow_viewport_enable = true
+
+[node name="KinematicBody2D2" parent="Objects/Group2/EnemyRobo6" instance=ExtResource( 13 )]
+position = Vector2( 4244, 499 )
+z_index = 999
+
+[node name="Head" parent="Objects/Group2/EnemyRobo6" instance=ExtResource( 14 )]
+position = Vector2( 1745, -380 )
+
+[node name="EnemyRobo7" type="CanvasLayer" parent="Objects/Group2"]
+layer = 10
+follow_viewport_enable = true
+
+[node name="KinematicBody2D2" parent="Objects/Group2/EnemyRobo7" instance=ExtResource( 13 )]
+position = Vector2( 4384, 592 )
+z_index = 999
+
+[node name="Head" parent="Objects/Group2/EnemyRobo7" instance=ExtResource( 14 )]
+position = Vector2( 1745, -380 )
+
+[node name="Chicken7" type="CanvasLayer" parent="Objects/Group2"]
+layer = 10
+follow_viewport_enable = true
+
+[node name="KinematicBody2D" parent="Objects/Group2/Chicken7" instance=ExtResource( 12 )]
+position = Vector2( 4386, 412 )
+
+[node name="Chicken8" type="CanvasLayer" parent="Objects/Group2"]
+layer = 10
+follow_viewport_enable = true
+
+[node name="KinematicBody2D" parent="Objects/Group2/Chicken8" instance=ExtResource( 12 )]
+position = Vector2( 4412, 510 )
+
+[node name="Group3" type="Node2D" parent="Objects"]
+script = ExtResource( 9 )
+
+[node name="Chicken4" type="CanvasLayer" parent="Objects/Group3"]
+layer = 10
+follow_viewport_enable = true
+
+[node name="KinematicBody2D" parent="Objects/Group3/Chicken4" instance=ExtResource( 8 )]
+position = Vector2( 6502, 607 )
+
+[node name="Chicken6" type="CanvasLayer" parent="Objects/Group3"]
+layer = 10
+follow_viewport_enable = true
+
+[node name="KinematicBody2D" parent="Objects/Group3/Chicken6" instance=ExtResource( 11 )]
+position = Vector2( 6527, 500 )
+
+[node name="Chicken5" type="CanvasLayer" parent="Objects/Group3"]
+layer = 10
+follow_viewport_enable = true
+
+[node name="KinematicBody2D" parent="Objects/Group3/Chicken5" instance=ExtResource( 8 )]
+position = Vector2( 6255, 507 )
+
+[node name="EnemyRobo4" type="CanvasLayer" parent="Objects/Group3"]
+layer = 10
+follow_viewport_enable = true
+
+[node name="KinematicBody2D2" parent="Objects/Group3/EnemyRobo4" instance=ExtResource( 13 )]
+position = Vector2( 6663, 427 )
+z_index = 999
+
+[node name="Head" parent="Objects/Group3/EnemyRobo4" instance=ExtResource( 14 )]
+position = Vector2( 1745, -380 )
+
+[node name="End" type="Node2D" parent="Objects"]
+script = ExtResource( 23 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )
+volume_db = -28.203
+autoplay = true
+script = ExtResource( 21 )
+
+[connection signal="area_entered" from="LevelBackground/Area2D" to="Objects/Player/Player/Player/Camera2D" method="_on_Cutscene_area_entered"]
+[connection signal="animation_finished" from="LevelBackground/Area2D/StaticBody2D/Cutscene" to="LevelBackground/Area2D/StaticBody2D/Cutscene" method="_on_AnimatedSprite_animation_finished"]
+[connection signal="area_entered" from="Triggers/TriggerGroup1" to="Triggers/TriggerGroup1" method="area_entered"]
+[connection signal="trigger" from="Triggers/TriggerGroup1" to="Objects/Player/Player/Player/Camera2D" method="_on_TriggerGroup1_trigger"]
+[connection signal="area_entered" from="Triggers/TriggerGroup2" to="Triggers/TriggerGroup2" method="area_entered"]
+[connection signal="trigger" from="Triggers/TriggerGroup2" to="Objects/Player/Player/Player/Camera2D" method="_on_TriggerGroup2_trigger"]
+[connection signal="area_entered" from="Triggers/TriggerGroup4" to="Triggers/TriggerGroup4" method="area_entered"]
+[connection signal="trigger" from="Triggers/TriggerGroup4" to="Objects/Player/Player/Player/Camera2D" method="_on_TriggerGroup4_trigger"]
+[connection signal="area_entered" from="Triggers/TriggerGroup3" to="Triggers/TriggerGroup3" method="area_entered"]
+[connection signal="trigger" from="Triggers/TriggerGroup3" to="LevelBackground/Area2D/StaticBody2D/Cutscene" method="_on_TriggerGroup3_trigger"]
+[connection signal="trigger" from="Triggers/TriggerGroup3" to="Objects/Player" method="_on_TriggerGroup3_trigger"]
+[connection signal="end" from="Objects/Group1" to="Objects/Player/Player/Player/Camera2D" method="_on_Group1_end"]
+[connection signal="HeadIn" from="Objects/Group1/EnemyRobo4/KinematicBody2D2" to="Objects/Group1/EnemyRobo4/Head" method="OnHeadIn"]
+[connection signal="HeadOut" from="Objects/Group1/EnemyRobo4/KinematicBody2D2" to="Objects/Group1/EnemyRobo4/Head" method="_on_KinematicBody2D2_HeadOut"]
+[connection signal="Back" from="Objects/Group1/EnemyRobo4/Head" to="Objects/Group1/EnemyRobo4/KinematicBody2D2" method="OnBack"]
+[connection signal="end" from="Objects/Group2" to="Objects/Player/Player/Player/Camera2D" method="_on_Group2_end"]
+[connection signal="HeadIn" from="Objects/Group2/EnemyRobo6/KinematicBody2D2" to="Objects/Group2/EnemyRobo6/Head" method="OnHeadIn"]
+[connection signal="HeadOut" from="Objects/Group2/EnemyRobo6/KinematicBody2D2" to="Objects/Group2/EnemyRobo6/Head" method="_on_KinematicBody2D2_HeadOut"]
+[connection signal="Back" from="Objects/Group2/EnemyRobo6/Head" to="Objects/Group2/EnemyRobo6/KinematicBody2D2" method="OnBack"]
+[connection signal="HeadIn" from="Objects/Group2/EnemyRobo7/KinematicBody2D2" to="Objects/Group2/EnemyRobo7/Head" method="OnHeadIn"]
+[connection signal="HeadOut" from="Objects/Group2/EnemyRobo7/KinematicBody2D2" to="Objects/Group2/EnemyRobo7/Head" method="_on_KinematicBody2D2_HeadOut"]
+[connection signal="Back" from="Objects/Group2/EnemyRobo7/Head" to="Objects/Group2/EnemyRobo7/KinematicBody2D2" method="OnBack"]
+[connection signal="end" from="Objects/Group3" to="Objects/Player/Player/Player/Camera2D" method="_on_Group3_end"]
+[connection signal="HeadIn" from="Objects/Group3/EnemyRobo4/KinematicBody2D2" to="Objects/Group3/EnemyRobo4/Head" method="OnHeadIn"]
+[connection signal="HeadOut" from="Objects/Group3/EnemyRobo4/KinematicBody2D2" to="Objects/Group3/EnemyRobo4/Head" method="_on_KinematicBody2D2_HeadOut"]
+[connection signal="Back" from="Objects/Group3/EnemyRobo4/Head" to="Objects/Group3/EnemyRobo4/KinematicBody2D2" method="OnBack"]

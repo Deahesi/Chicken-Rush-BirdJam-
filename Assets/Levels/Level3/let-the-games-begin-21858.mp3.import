@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/let-the-games-begin-21858.mp3-6290ccffd892433dce0e902d40b9d9aa.mp3str"
+
+[deps]
+
+source_file="res://Assets/Levels/Level3/let-the-games-begin-21858.mp3"
+dest_files=[ "res://.import/let-the-games-begin-21858.mp3-6290ccffd892433dce0e902d40b9d9aa.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

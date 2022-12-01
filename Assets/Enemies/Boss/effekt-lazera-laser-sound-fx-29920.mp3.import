@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/effekt-lazera-laser-sound-fx-29920.mp3-809e4a6c81239b822f778e5d945a10e8.mp3str"
+
+[deps]
+
+source_file="res://Assets/Enemies/Boss/effekt-lazera-laser-sound-fx-29920.mp3"
+dest_files=[ "res://.import/effekt-lazera-laser-sound-fx-29920.mp3-809e4a6c81239b822f778e5d945a10e8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

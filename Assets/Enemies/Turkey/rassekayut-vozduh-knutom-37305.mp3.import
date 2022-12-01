@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/rassekayut-vozduh-knutom-37305.mp3-691b9514047d42f3a0c8209191784665.mp3str"
+
+[deps]
+
+source_file="res://Assets/Enemies/Turkey/rassekayut-vozduh-knutom-37305.mp3"
+dest_files=[ "res://.import/rassekayut-vozduh-knutom-37305.mp3-691b9514047d42f3a0c8209191784665.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

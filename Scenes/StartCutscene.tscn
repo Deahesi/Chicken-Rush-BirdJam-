@@ -1,0 +1,79 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/intro.png" type="Texture" id=1]
+[ext_resource path="res://Post Processing tool/PostProcessing_tool.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/StartCutscene.gd" type="Script" id=3]
+[ext_resource path="res://Assets/zvuk-dlya-stsenyi-ujasa-24334.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Levels/Level2/music.gd" type="Script" id=5]
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 602, 0, 602, 715 )
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 602, 715 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ SubResource( 3 ) ],
+"loop": false,
+"name": "2",
+"speed": 1.0
+}, {
+"frames": [ SubResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PostProcessing_tool" parent="CanvasLayer" instance=ExtResource( 2 )]
+anchor_left = -0.386719
+anchor_right = 0.614844
+margin_left = 495.0
+margin_top = 3.0
+margin_right = 495.0
+margin_bottom = 3.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+adjustment_show = true
+adjustment_brightnes = 0.75
+color_splash_strength = -1.939
+vignette_show = true
+vignette_multiplier = 0.844
+vignette_scale = 0.129
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 641, 360 )
+current = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -23.0
+margin_top = -6.0
+margin_right = 1433.0
+margin_bottom = 723.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 676, 360.25 )
+scale = Vector2( 1, 1.0049 )
+frames = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.169
+one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -19.39
+script = ExtResource( 5 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/zvuk-avtomobilnoy-avarii-na-doroge-34121.mp3-ede14cebd0cddd88ace7654b2ba339e7.mp3str"
+
+[deps]
+
+source_file="res://Assets/Levels/zvuk-avtomobilnoy-avarii-na-doroge-34121.mp3"
+dest_files=[ "res://.import/zvuk-avtomobilnoy-avarii-na-doroge-34121.mp3-ede14cebd0cddd88ace7654b2ba339e7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

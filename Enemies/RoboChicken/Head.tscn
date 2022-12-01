@@ -1,0 +1,125 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Enemies/RoboChicken/Head.cs" type="Script" id=1]
+[ext_resource path="res://Assets/Enemies/RoboChicken/chickenRoboHead-walkt.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Enemies/RoboChicken/chickenRoboHead-dead.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Enemies/RoboChicken/Hurt.mp3" type="AudioStream" id=4]
+[ext_resource path="res://sounds.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=61]
+extents = Vector2( 33.5, 22.5 )
+
+[sub_resource type="RectangleShape2D" id=62]
+extents = Vector2( 27, 25 )
+
+[sub_resource type="AtlasTexture" id=66]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=67]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 480, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=55]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=58]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=59]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 160, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=60]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 320, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=50]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 480, 0, 160, 160 )
+
+[sub_resource type="SpriteFrames" id=63]
+animations = [ {
+"frames": [ SubResource( 66 ), SubResource( 67 ) ],
+"loop": true,
+"name": "Attack",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 55 ) ],
+"loop": false,
+"name": "Death",
+"speed": 1.0
+}, {
+"frames": [ SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 50 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=64]
+extents = Vector2( 21.5, 5.5 )
+
+[sub_resource type="RectangleShape2D" id=65]
+extents = Vector2( 22.5, 35.25 )
+
+[node name="Head" type="KinematicBody2D"]
+collision_layer = 6
+collision_mask = 33
+script = ExtResource( 1 )
+speed = 600.0
+hurtSound = ExtResource( 4 )
+
+[node name="Visible" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 10, -0.374996 )
+scale = Vector2( 5.3, 5.6625 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1, 11 )
+shape = SubResource( 61 )
+
+[node name="HurtBox" type="Area2D" parent="." groups=["hurtbox"]]
+position = Vector2( -139, -7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2( 142, 15 )
+shape = SubResource( 62 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -1, -9 )
+scale = Vector2( 0.678125, 0.66875 )
+frames = SubResource( 63 )
+animation = "Attack"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( 0.5, 28.5 )
+shape = SubResource( 64 )
+
+[node name="KickPos" type="Area2D" parent="."]
+position = Vector2( 148, -25 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KickPos"]
+position = Vector2( -112.5, 24.25 )
+shape = SubResource( 65 )
+disabled = true
+
+[node name="AttackCD" type="Timer" parent="."]
+one_shot = true
+
+[node name="StopTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Sounds" type="AudioStreamPlayer" parent="."]
+volume_db = -18.508
+script = ExtResource( 5 )
+
+[connection signal="screen_exited" from="Visible" to="." method="_on_Visible_screen_exited"]
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

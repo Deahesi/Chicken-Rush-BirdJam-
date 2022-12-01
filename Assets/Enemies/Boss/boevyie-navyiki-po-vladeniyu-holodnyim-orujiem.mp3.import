@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/boevyie-navyiki-po-vladeniyu-holodnyim-orujiem.mp3-a70a5c594c9bb1cdfb1f631d2cd506bb.mp3str"
+
+[deps]
+
+source_file="res://Assets/Enemies/Boss/boevyie-navyiki-po-vladeniyu-holodnyim-orujiem.mp3"
+dest_files=[ "res://.import/boevyie-navyiki-po-vladeniyu-holodnyim-orujiem.mp3-a70a5c594c9bb1cdfb1f631d2cd506bb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
